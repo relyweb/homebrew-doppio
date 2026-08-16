@@ -1,6 +1,6 @@
 cask "doppio" do
-  version "0.2.1"
-  sha256 "955cbd4ed1cc95affe3c38e38c1c8ae53eedcb95abac4d93590d4b8f6a8de575"
+  version "0.2.2"
+  sha256 "22cb026911edb752cf03b3f25ac77945521c91a81583120c96a1abe9afcc823d"
 
   url "https://github.com/relyweb/doppio/releases/download/v#{version}/Doppio.zip",
       verified: "github.com/relyweb/doppio/"
