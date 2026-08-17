@@ -21,7 +21,19 @@ cask "doppio" do
                    sudo: false
   end
 
-  uninstall quit: "com.doppio.keepawake"
+  # Tear down the privileged lid-closed helper that "Allow When Lid Closed"
+  # installs, so a root LaunchDaemon is never left behind after uninstall.
+  # `launchctl` unloads the daemon; `delete` removes the root-owned files
+  # (Homebrew elevates with sudo as needed).
+  uninstall launchctl: "com.doppio.keepawake.lidhelper",
+            quit:      "com.doppio.keepawake",
+            delete:    [
+              "/Library/Application Support/Doppio",
+              "/Library/LaunchDaemons/com.doppio.keepawake.lidhelper.plist",
+            ]
 
-  zap trash: "~/Library/Preferences/com.doppio.keepawake.plist"
+  zap trash: [
+    "~/.doppio",
+    "~/Library/Preferences/com.doppio.keepawake.plist",
+  ]
 end
