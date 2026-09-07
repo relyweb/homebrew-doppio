@@ -2,8 +2,7 @@ cask "doppio" do
   version "0.3.0"
   sha256 "3705266a91ae5af7c28e31ad94cdbbc2f0337bc2b64ebcec40647cbaf7d10414"
 
-  url "https://github.com/relyweb/doppio/releases/download/v#{version}/Doppio.zip",
-      verified: "github.com/relyweb/doppio/"
+  url "https://github.com/relyweb/doppio/releases/download/v#{version}/Doppio.zip"
   name "Doppio"
   desc "Prevents sleep for Claude Code, omp, and other agentic tasks"
   homepage "https://github.com/relyweb/doppio"
