@@ -11,14 +11,6 @@ cask "doppio" do
 
   app "Doppio.app"
 
-  # The app is ad-hoc signed (not notarized). Gatekeeper quarantines downloaded
-  # unsigned apps, so strip the flag on install; otherwise the first launch is
-  # blocked until the user approves it under System Settings > Privacy & Security.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Doppio.app"],
-                   sudo: false
-  end
 
   # Tear down the privileged lid-closed helper that "Allow When Lid Closed"
   # installs, so a root LaunchDaemon is never left behind after uninstall.
