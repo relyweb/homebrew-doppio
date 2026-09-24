@@ -11,7 +11,6 @@ cask "doppio" do
 
   app "Doppio.app"
 
-
   # Tear down the privileged lid-closed helper that "Allow When Lid Closed"
   # installs, so a root LaunchDaemon is never left behind after uninstall.
   # `launchctl` unloads the daemon; `delete` removes the root-owned files

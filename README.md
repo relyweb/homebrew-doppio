@@ -24,17 +24,11 @@ brew upgrade --cask doppio
 brew uninstall --cask doppio          # add --zap to also remove preferences
 ```
 
-## First launch (Gatekeeper)
+## Gatekeeper & Security
 
-Doppio is ad-hoc signed but **not notarized** (no Apple Developer ID yet). The
-cask strips the download quarantine flag on install, so it should launch without
-the "unidentified developer" prompt. If macOS still blocks it:
-
-```sh
-xattr -dr com.apple.quarantine /Applications/Doppio.app
-```
-
-or approve it under **System Settings → Privacy & Security → Open Anyway**.
+Doppio is signed with a valid **Apple Developer ID** (`RELYWEB TECHNOLOGIES PRIVATE LIMITED`)
+and **notarized by Apple**, allowing Gatekeeper to verify and open it smoothly without
+unidentified developer warnings.
 
 ## Requirements
 
