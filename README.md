@@ -24,12 +24,6 @@ brew upgrade --cask doppio
 brew uninstall --cask doppio          # add --zap to also remove preferences
 ```
 
-## Gatekeeper & Security
-
-Doppio is signed with a valid **Apple Developer ID** (`RELYWEB TECHNOLOGIES PRIVATE LIMITED`)
-and **notarized by Apple**, allowing Gatekeeper to verify and open it smoothly without
-unidentified developer warnings.
-
 ## Requirements
 
 - macOS 13 Ventura or later (Apple Silicon or Intel).
